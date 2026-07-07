@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社エス・イー・キタムラ様 導入事例 | PDF_DX</title>
+  <style>
+    :root {
+      --navy: #0f2742;
+      --navy-2: #173a5e;
+      --steel: #315a7c;
+      --cyan: #18a6c8;
+      --cyan-dark: #0d8fb1;
+      --green: #18a874;
+      --bg: #f5f8fb;
+      --bg-2: #eef5f9;
+      --text: #17202a;
+      --muted: #66788a;
+      --line: #d9e4ec;
+      --white: #ffffff;
+      --card-shadow: 0 18px 60px rgba(15, 39, 66, 0.10);
+      --soft-shadow: 0 10px 30px rgba(15, 39, 66, 0.08);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(100% - 40px, var(--max)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(217,228,236,0.8);
+    }
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: var(--navy);
+      font-size: 20px;
+    }
+    .brand-mark {
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--navy), var(--cyan));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #43576a;
+      font-weight: 600;
+    }
+    .nav-links a:hover { color: var(--cyan-dark); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--cyan);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(24,166,200,.26);
+    }
+    .btn-primary:hover { background: var(--cyan-dark); }
+    .btn-secondary {
+      background: #fff;
+      color: var(--navy);
+      border-color: var(--line);
+      box-shadow: 0 8px 20px rgba(15,39,66,.06);
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(24,166,200,.16), transparent 30%),
+        linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+      padding: 74px 0 92px;
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(15,39,66,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,39,66,.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.7), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 46px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(24,166,200,.10);
+      color: var(--cyan-dark);
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .eyebrow:before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 4px rgba(24,166,200,.15);
+    }
+    .hero h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(32px, 4.4vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -.045em;
+      text-wrap: balance;
+    }
+    .hero h1 span { color: var(--cyan-dark); }
+    .hero-copy {
+      margin: 24px 0 0;
+      font-size: 17px;
+      color: #41566b;
+      max-width: 620px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+    .tag {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy-2);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 7px 11px;
+      border-radius: 999px;
+      box-shadow: 0 7px 18px rgba(15,39,66,.05);
+    }
+
+    .mock-wrap {
+      position: relative;
+      min-height: 520px;
+    }
+    .mock-card {
+      position: relative;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(217,228,236,.92);
+      border-radius: 28px;
+      box-shadow: var(--card-shadow);
+      padding: 16px;
+      transform: rotate(1deg);
+    }
+    .mock-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px 14px;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .window-dots { display: flex; gap: 6px; }
+    .window-dots span { width: 9px; height: 9px; border-radius: 50%; background: #c8d7e2; display: block; }
+    .mock-body {
+      display: grid;
+      grid-template-columns: 1fr 182px;
+      gap: 12px;
+      background: #f4f8fb;
+      border-radius: 20px;
+      padding: 12px;
+      border: 1px solid #dbe7ef;
+    }
+    .drawing {
+      position: relative;
+      min-height: 330px;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #dce8ef;
+      overflow: hidden;
+      padding: 24px;
+    }
+    .drawing:before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: linear-gradient(#eaf1f5 1px, transparent 1px), linear-gradient(90deg, #eaf1f5 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .blueprint {
+      position: relative;
+      height: 250px;
+      border: 2px solid #8db2ca;
+      margin: 20px auto;
+      max-width: 280px;
+      opacity: .95;
+    }
+    .blueprint:before, .blueprint:after {
+      content: "";
+      position: absolute;
+      border: 2px solid #8db2ca;
+    }
+    .blueprint:before { width: 118px; height: 82px; left: 28px; top: 30px; }
+    .blueprint:after { width: 84px; height: 128px; right: 28px; bottom: 28px; }
+    .red-mark {
+      position: absolute;
+      left: 48%; top: 35%;
+      width: 92px; height: 62px;
+      border: 4px solid #f06464;
+      border-radius: 50%;
+      transform: rotate(-16deg);
+      z-index: 2;
+    }
+    .comment-bubble {
+      position: absolute;
+      z-index: 3;
+      right: 20px; top: 44px;
+      width: 132px;
+      background: #fff;
+      border: 1px solid #f4b4b4;
+      border-left: 4px solid #f06464;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #5d4a4a;
+      box-shadow: 0 10px 24px rgba(240,100,100,.14);
+    }
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .panel-box {
+      background: #fff;
+      border: 1px solid #dce8ef;
+      border-radius: 15px;
+      padding: 13px;
+    }
+    .panel-title {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .history-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 10px;
+      color: #52677b;
+      padding: 8px 0;
+      border-top: 1px solid #eef3f7;
+    }
+    .history-item:first-of-type { border-top: 0; }
+    .avatar {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: #e3f6fb;
+      color: var(--cyan-dark);
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+    .stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 900;
+      margin: 3px;
+      border: 1px solid #cdebdc;
+      color: #117a53;
+      background: #ebfff6;
+    }
+    .stamp.warn { border-color: #f2d0c3; color: #b14d2d; background: #fff2ec; }
+    .floating-card {
+      position: absolute;
+      left: -14px;
+      bottom: 26px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 310px;
+    }
+    .floating-icon {
+      width: 42px; height: 42px;
+      border-radius: 13px;
+      background: rgba(24,168,116,.12);
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+    .floating-card strong { display: block; color: var(--navy); font-size: 13px; line-height: 1.4; }
+    .floating-card small { display: block; color: var(--muted); font-weight: 700; }
+
+    section { padding: 86px 0; }
+    .section-head {
+      max-width: 920px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+    .section-label {
+      color: var(--cyan-dark);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(24px, 2.6vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -.025em;
+      text-wrap: balance;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    .section-desc {
+      margin: 16px auto 0;
+      color: #53687b;
+      font-size: 16px;
+      max-width: 760px;
+    }
+
+    .bg-soft { background: var(--bg); }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15,39,66,.045);
+    }
+    .icon {
+      width: 46px; height: 46px;
+      border-radius: 15px;
+      background: rgba(24,166,200,.10);
+      color: var(--cyan-dark);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 14px;
+      font-size: 19px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .card p { margin: 0; color: #607487; font-size: 14px; }
+
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .flow-box {
+      border-radius: 26px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--soft-shadow);
+    }
+    .flow-box.before { background: #f7f9fb; }
+    .flow-box.after { border-color: rgba(24,166,200,.25); background: linear-gradient(180deg, #ffffff, #f0fbfe); }
+    .flow-box h3 {
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+    .steps { display: grid; gap: 10px; }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid #e1eaf0;
+      color: #506579;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .after .step { border-color: #ccecf4; color: var(--navy); }
+    .step-num {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #e6eef4;
+      color: var(--steel);
+      font-size: 12px;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+    .after .step-num { background: var(--cyan); color: #fff; }
+
+    .effects {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 34px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--navy), #123a5f);
+      color: #fff;
+      border-radius: 34px;
+      padding: 44px;
+      box-shadow: var(--card-shadow);
+    }
+    .effects h2 { color: #fff; }
+    .effects p { color: rgba(255,255,255,.78); }
+    .big-word {
+      display: inline-block;
+      font-size: clamp(60px, 8vw, 108px);
+      line-height: .9;
+      letter-spacing: -.06em;
+      font-weight: 900;
+      color: rgba(255,255,255,.12);
+      margin-bottom: 10px;
+    }
+    .check-list { display: grid; gap: 12px; }
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 800;
+    }
+    .check-item:before {
+      content: "✓";
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--cyan);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .industry {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      min-height: 190px;
+      box-shadow: 0 8px 22px rgba(15,39,66,.04);
+    }
+    .industry strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .industry p { margin: 0; color: #607487; font-size: 14px; }
+
+    .security {
+      background: linear-gradient(135deg, #0d243c, #173a5e);
+      color: #fff;
+      border-radius: 34px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .security h2 { color: #fff; }
+    .security .section-label { color: #8be5f8; }
+    .security p { color: rgba(255,255,255,.75); }
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .security-item {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 16px;
+      padding: 14px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+    }
+
+
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .screen-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--soft-shadow);
+      display: grid;
+      grid-template-rows: 292px 1fr;
+      min-height: 470px;
+    }
+    .screen-shot {
+      height: 292px;
+      background: linear-gradient(180deg, #f7fbfd, #eef5f9);
+      border-bottom: 1px solid var(--line);
+      padding: 16px;
+    }
+    .screen-window {
+      height: 100%;
+      min-height: 226px;
+      background: #fff;
+      border: 1px solid #d9e7ef;
+      border-radius: 18px;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 42px 1fr;
+    }
+    .screen-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #f8fbfd;
+      border-bottom: 1px solid #e2edf3;
+      padding: 0 14px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .screen-content { padding: 14px; display: grid; gap: 10px; }
+    .mini-row {
+      display: grid;
+      grid-template-columns: 1.1fr .7fr .7fr .5fr;
+      gap: 8px;
+      align-items: center;
+      padding: 9px 10px;
+      border: 1px solid #e4edf3;
+      border-radius: 12px;
+      color: #52677b;
+      font-size: 11px;
+      font-weight: 800;
+      background: #fff;
+    }
+    .mini-row.header { color: var(--steel); background: #f4f8fb; }
+    .mini-status { color: var(--cyan-dark); background: #e9faff; border-radius: 999px; padding: 4px 8px; text-align: center; }
+    .viewer-mini {
+      display: grid;
+      grid-template-columns: 1fr 130px;
+      gap: 12px;
+      min-height: 170px;
+    }
+    .viewer-paper {
+      position: relative;
+      border: 1px solid #dce8ef;
+      border-radius: 14px;
+      background-image: linear-gradient(#eef4f8 1px, transparent 1px), linear-gradient(90deg, #eef4f8 1px, transparent 1px);
+      background-size: 18px 18px;
+      overflow: hidden;
+    }
+    .viewer-paper:before {
+      content: "";
+      position: absolute;
+      left: 36px; top: 34px;
+      width: 120px; height: 82px;
+      border: 2px solid #8db2ca;
+      box-shadow: 80px 48px 0 -2px #fff, 80px 48px 0 0 #8db2ca;
+    }
+    .viewer-paper:after {
+      content: "要確認";
+      position: absolute;
+      right: 18px; top: 28px;
+      border: 2px solid #f06464;
+      color: #c94d4d;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 900;
+      transform: rotate(-10deg);
+      background: rgba(255,255,255,.85);
+    }
+    .viewer-side { display: grid; gap: 8px; }
+    .mini-comment {
+      border: 1px solid #e4edf3;
+      border-radius: 12px;
+      padding: 9px;
+      font-size: 11px;
+      color: #52677b;
+      font-weight: 700;
+      background: #fff;
+    }
+    .permission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .permission-card {
+      border: 1px solid #dfeaf1;
+      border-radius: 14px;
+      padding: 14px 10px;
+      text-align: center;
+      background: #fff;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .permission-card span { display: block; color: #687b8e; font-size: 10px; font-weight: 800; margin-top: 6px; }
+    .screen-caption {
+      padding: 20px 22px 22px;
+      min-height: 178px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .screen-caption h3 { margin: 0 0 8px; color: var(--navy); font-size: 18px; }
+    .screen-caption p { margin: 0; color: #607487; font-size: 14px; }
+    .placeholder-note {
+      margin-top: 22px;
+      text-align: center;
+      color: #6f8192;
+      font-size: 13px;
+    }
+    .legal-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .legal-links a { color: rgba(255,255,255,.78); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-links a:hover { color: #fff; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+    .pricing-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid rgba(24,166,200,.18);
+      border-radius: 28px;
+      box-shadow: var(--soft-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .pricing-card.featured {
+      border-color: rgba(24,166,200,.42);
+      box-shadow: var(--card-shadow);
+      transform: translateY(-8px);
+    }
+    .plan-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      background: var(--cyan);
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .pricing-head {
+      min-height: 255px;
+      padding: 30px 28px 24px;
+      background: linear-gradient(135deg, #f2fbfd, #fff);
+      border-bottom: 1px solid var(--line);
+    }
+    .pricing-head h3 { margin: 0; color: var(--navy); font-size: 23px; padding-right: 92px; }
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 18px;
+      color: var(--navy);
+    }
+    .price strong { font-size: clamp(30px, 3vw, 42px); line-height: 1.05; letter-spacing: -.05em; }
+    .price span { color: #617589; font-size: 13px; font-weight: 800; }
+    .pricing-body {
+      padding: 24px 28px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-list { display: grid; gap: 11px; }
+    .plan-list div {
+      position: relative;
+      padding-left: 26px;
+      color: #53687b;
+      font-size: 14px;
+      font-weight: 750;
+    }
+    .plan-list div:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(24,166,200,.12);
+      color: var(--cyan-dark);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .spec {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 13px 14px;
+      color: #53687b;
+      font-weight: 700;
+    }
+    .spec strong { color: var(--navy); }
+
+    .subsidy {
+      background: linear-gradient(135deg, #effbf6, #f4fbfe);
+      border: 1px solid #d2efe6;
+      border-radius: 30px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .subsidy h2 { font-size: clamp(24px, 2.4vw, 32px); }
+    .subsidy p { color: #53687b; margin: 14px 0 0; }
+    .small-note { font-size: 12px; color: #6f8192; margin-top: 12px; }
+
+    .faq-list { max-width: 880px; margin: 0 auto; display: grid; gap: 12px; }
+    details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0 20px;
+      box-shadow: 0 8px 20px rgba(15,39,66,.035);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--navy);
+      padding: 18px 0;
+      list-style: none;
+      position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      color: var(--cyan-dark);
+      font-size: 22px;
+      top: 14px;
+    }
+    details[open] summary:after { content: "−"; }
+    details p { margin: 0 0 18px; color: #607487; }
+
+    .final-cta {
+      padding: 74px 0;
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+    }
+    .final-cta h2 { color: #fff; }
+    .final-cta p { color: rgba(255,255,255,.76); max-width: 700px; margin: 18px auto 28px; }
+    .footer {
+      background: #08192a;
+      color: rgba(255,255,255,.62);
+      padding: 26px 0;
+      font-size: 13px;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 980px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-grid, .flow-wrap, .effects, .security, .subsidy { grid-template-columns: 1fr; }
+      .mock-wrap { min-height: auto; }
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .industry-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card.featured { transform: none; }
+      .mock-card { transform: none; }
+      .floating-card { position: relative; left: auto; bottom: auto; margin-top: 14px; max-width: none; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .nav { height: 66px; }
+      .nav-links .btn { padding: 0 14px; min-height: 40px; }
+      .hero { padding: 46px 0 62px; }
+      .hero-copy { font-size: 15px; }
+      section { padding: 62px 0; }
+      .cards-grid, .industry-grid, .gallery-grid, .pricing-grid, .spec-grid, .security-grid { grid-template-columns: 1fr; }
+      .screen-card { grid-template-rows: auto 1fr; min-height: auto; }
+      .screen-shot { height: auto; min-height: 260px; }
+      .mock-body { grid-template-columns: 1fr; }
+      .side-panel { display: grid; grid-template-columns: 1fr; }
+      .drawing { min-height: 280px; padding: 16px; }
+      .blueprint { height: 210px; }
+      .comment-bubble { right: 10px; top: 34px; width: 116px; }
+      .effects, .security, .subsidy { padding: 28px; border-radius: 26px; }
+      .pricing-head, .pricing-body { padding: 24px; }
+      .price strong { font-size: 38px; }
+      .footer-inner { flex-direction: column; }
+      .legal-links { justify-content: flex-start; }
+      .viewer-mini { grid-template-columns: 1fr; }
+      .permission-grid { grid-template-columns: 1fr; }
+    }
+  
+    .case-hero { padding: 72px 0 84px; background: radial-gradient(circle at 78% 18%, rgba(24,166,200,.14), transparent 30%), linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%); position: relative; overflow: hidden; }
+    .case-hero:before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(15,39,66,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(15,39,66,.045) 1px, transparent 1px); background-size:42px 42px; mask-image: linear-gradient(180deg, rgba(0,0,0,.55), transparent 72%); pointer-events:none; }
+    .case-grid { position:relative; display:grid; grid-template-columns: 1.04fr .96fr; gap:46px; align-items:center; }
+    .case-hero h1 { margin:0; color:var(--navy); font-size: clamp(32px, 4.2vw, 52px); line-height:1.16; letter-spacing:-.045em; text-wrap:balance; }
+    .case-copy { margin:22px 0 0; color:#41566b; font-size:17px; max-width:650px; }
+    .case-stats { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; margin-top:28px; }
+    .stat-card { background:#fff; border:1px solid var(--line); border-radius:20px; padding:20px; box-shadow:var(--soft-shadow); }
+    .stat-card strong { display:block; color:var(--cyan-dark); font-size:30px; line-height:1.15; letter-spacing:-.03em; }
+    .stat-card span { color:var(--muted); font-size:13px; font-weight:700; }
+    .company-card { background:#fff; border:1px solid rgba(217,228,236,.92); border-radius:28px; box-shadow:var(--card-shadow); padding:28px; }
+    .company-card h2 { margin:0 0 12px; font-size:22px; color:var(--navy); }
+    .company-meta { display:grid; gap:10px; margin:22px 0 0; }
+    .meta-row { display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px solid var(--line); color:#41566b; font-size:14px; }
+    .meta-row b { color:var(--navy); }
+    .quote-box { background:linear-gradient(135deg, var(--navy), var(--navy-2)); color:#fff; border-radius:28px; padding:34px; box-shadow:var(--card-shadow); position:relative; overflow:hidden; }
+    .quote-box:before { content:'“'; position:absolute; right:22px; top:-24px; font-size:150px; color:rgba(255,255,255,.10); font-family:Georgia, serif; }
+    .quote-box p { margin:0; font-size:19px; line-height:1.9; font-weight:700; position:relative; }
+    .quote-box small { display:block; margin-top:18px; color:rgba(255,255,255,.75); position:relative; }
+    .flow-compare { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+    .flow-card { border:1px solid var(--line); border-radius:26px; padding:28px; background:#fff; box-shadow:var(--soft-shadow); }
+    .flow-card.before { background:#fff; }
+    .flow-card.after { background:linear-gradient(180deg, #f7fcfe, #fff); border-color:rgba(24,166,200,.25); }
+    .flow-card h3 { margin:0 0 18px; color:var(--navy); font-size:22px; }
+    .flow-steps { display:grid; gap:10px; }
+    .flow-step { display:flex; gap:10px; align-items:flex-start; color:#41566b; font-size:14px; font-weight:700; }
+    .flow-step .dot { flex:0 0 auto; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; background:#e9f0f5; color:var(--steel); font-size:12px; font-weight:900; margin-top:1px; }
+    .after .flow-step .dot { background:rgba(24,166,200,.13); color:var(--cyan-dark); }
+    .loop-note { margin-top:18px; padding:16px; border-radius:18px; background:#fff6ec; border:1px solid #f2d3aa; color:#7a4a12; font-size:14px; font-weight:700; }
+    .three-points { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+    .point-card { background:#fff; border:1px solid var(--line); border-radius:26px; padding:26px; box-shadow:var(--soft-shadow); }
+    .point-card .label { display:inline-flex; border-radius:999px; padding:6px 10px; background:rgba(24,166,200,.10); color:var(--cyan-dark); font-weight:900; font-size:12px; margin-bottom:12px; }
+    .point-card h3 { margin:0 0 12px; color:var(--navy); font-size:21px; line-height:1.35; }
+    .point-card p { margin:0; color:#53697d; font-size:14px; }
+    .challenge { background:#fff; border:1px solid var(--line); border-radius:28px; padding:34px; box-shadow:var(--soft-shadow); }
+    .challenge-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:30px; align-items:start; }
+    .challenge h3 { margin:0; color:var(--navy); font-size:26px; line-height:1.35; }
+    .check-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; }
+    .check-list li { display:flex; gap:10px; color:#41566b; font-weight:700; }
+    .check-list li:before { content:'✓'; color:var(--cyan-dark); font-weight:900; }
+    .cleanroom { background:linear-gradient(135deg, #f5fbfd, #eef5f9); border:1px solid rgba(24,166,200,.20); border-radius:28px; padding:34px; }
+    .recommend-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
+    .recommend-item { background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px; color:#41566b; font-weight:800; }
+    @media (max-width: 900px) { .case-grid, .flow-compare, .three-points, .challenge-grid, .recommend-grid { grid-template-columns:1fr; } .case-stats { grid-template-columns:1fr; } }
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="PDF_DX">
+        <span class="brand-mark">DX</span>
+        <span>PDF_DX</span>
+      </a>
+      <nav class="nav-links" aria-label="主要ナビゲーション">
+        <a href="index.html">製品ページ</a>
+        <a href="#before-after">Before/After</a>
+        <a href="#points">3つの観点</a>
+        <a href="#quote">担当者コメント</a>
+        <a href="mailto:it_contact@thinple.jp" class="btn btn-primary">導入相談をする</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container case-grid">
+        <div>
+          <div class="eyebrow">株式会社エス・イー・キタムラ様 PDF_DX導入事例</div>
+          <h1>紙図面30万枚の現場が、<br><span>もう紙には戻れなくなった理由</span></h1>
+          <p class="case-copy">制御盤・計装盤・分電盤等の盤製作を手がける株式会社エス・イー・キタムラ様では、品質管理・検証チームを中心にPDF_DXを導入。紙図面の印刷、仕分け、書き込み、スキャン、保管、機密文書の溶解処理まで含めたアナログな運用を見直しました。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html">PDF_DX製品ページを見る</a>
+            <a class="btn btn-secondary" href="mailto:it_contact@thinple.jp">導入相談をする</a>
+          </div>
+          <div class="case-stats">
+            <div class="stat-card"><strong>約30万枚</strong><span>年間規模の紙使用量を大幅削減</span></div>
+            <div class="stat-card"><strong>1000枚規模</strong><span>検査資料の仕分け・回収負担を見直し</span></div>
+          </div>
+        </div>
+        <aside class="company-card">
+          <h2>導入企業</h2>
+          <p>株式会社エス・イー・キタムラ様</p>
+          <div class="company-meta">
+            <div class="meta-row"><b>業種</b><span>制御盤・計装盤・分電盤等の盤製作</span></div>
+            <div class="meta-row"><b>対象部署</b><span>品質管理・検証チーム、設計関連部門</span></div>
+            <div class="meta-row"><b>主な用途</b><span>図面確認、検査記録、コメント・履歴管理</span></div>
+            <div class="meta-row"><b>公式サイト</b><span><a href="https://se-kitamura.com/" target="_blank" rel="noopener">se-kitamura.com</a></span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="quote-box">
+          <p>紙で運用していたときは、紙をなくしてしまう、しわくちゃになってスキャン時に詰まる、誰が検査したか分からない、といった課題がありました。PDF_DXでは、誰が何時何分に書いたかが分かる。今では、もう紙には戻れないと感じています。</p>
+          <small>株式会社エス・イー・キタムラ ご担当者様コメントをもとに編集</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg" id="before-after">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Before / After</div>
+          <h2>紙運用は、修正や問い合わせのたびに何度も繰り返されていた。</h2>
+          <p>導入前は、印刷して終わりではありませんでした。修正が入れば再印刷・再スキャンが発生し、設計から問い合わせが入れば保管資料を探して該当ページを確認する必要がありました。</p>
+        </div>
+        <div class="flow-compare">
+          <div class="flow-card before">
+            <h3>Before：紙運用</h3>
+            <div class="flow-steps">
+              <div class="flow-step"><span class="dot">1</span><span>印刷</span></div><div class="flow-step"><span class="dot">2</span><span>担当者ごとに仕分け</span></div><div class="flow-step"><span class="dot">3</span><span>各自で検査・書き込み</span></div><div class="flow-step"><span class="dot">4</span><span>持ち寄り</span></div><div class="flow-step"><span class="dot">5</span><span>抜け漏れ確認</span></div><div class="flow-step"><span class="dot">6</span><span>スキャン</span></div><div class="flow-step"><span class="dot">7</span><span>保管</span></div><div class="flow-step"><span class="dot">8</span><span>機密書類は溶解処理</span></div>
+            </div>
+            <div class="loop-note">修正がある場合は、再度「印刷 → 書き込み → スキャン → 保管」を繰り返す必要がありました。</div>
+          </div>
+          <div class="flow-card after">
+            <h3>After：PDF_DX運用</h3>
+            <div class="flow-steps">
+              <div class="flow-step"><span class="dot">1</span><span>PDFを登録</span></div><div class="flow-step"><span class="dot">2</span><span>担当者がタブレットで確認</span></div><div class="flow-step"><span class="dot">3</span><span>図面上に書き込み・コメント</span></div><div class="flow-step"><span class="dot">4</span><span>確認履歴を記録</span></div><div class="flow-step"><span class="dot">5</span><span>管理者が進捗・指摘内容を確認</span></div><div class="flow-step"><span class="dot">6</span><span>必要に応じて設計・現場間で共有</span></div>
+            </div>
+            <div class="loop-note" style="background:#effbf8;border-color:#bfe8da;color:#125f46;">問い合わせ時も、案件名・図面・該当ページをPDF_DX上で確認し、コメントや履歴を見ながら回答できます。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container challenge">
+        <div class="challenge-grid">
+          <div>
+            <div class="eyebrow">導入時のハードル</div>
+            <h3>一番大きかったのは、機能ではなく「やり方を変えること」への不安でした。</h3>
+          </div>
+          <div>
+            <p>長年、紙図面を印刷し、手元で確認し、必要に応じてスキャン・保管する運用が当たり前になっていたため、現場には「今までのやり方の方が慣れている」という抵抗感もありました。</p>
+            <p>導入時には、紙で発生していた問題を一つずつ共有し、PDF_DXで何が改善されるのかを現場に理解してもらうことが重要でした。運用が進むにつれて、履歴が残ること、図面上でコメントを確認できること、紙の紛失やスキャン作業が減ることが実感され、徐々に定着が進みました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg" id="points">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">3つの改善ポイント</div>
+          <h2>設計・品質管理・経費の3方向から、紙図面運用を改善。</h2>
+        </div>
+        <div class="three-points">
+          <article class="point-card">
+            <span class="label">設計観点</span>
+            <h3>該当ページを探す問い合わせ対応を減らす。</h3>
+            <p>設計から「どの案件のどのページにある回路か」という問い合わせが電話で入るたび、紙資料を取り出して探す必要がありました。PDF_DXでは、案件・図面・該当ページをデータ上で確認し、コメントや履歴を見ながら回答できます。</p>
+          </article>
+          <article class="point-card">
+            <span class="label">品質管理観点</span>
+            <h3>1000枚規模の検査資料を、紙で分けて集める負担を軽減。</h3>
+            <p>品質管理や検証チームでは、1000枚ほどの印刷物を各担当に分けて検査し、最後に持ち寄って完成版を作る運用がありました。PDF_DXでは、誰が何時何分に確認・書き込みしたかを履歴として追えます。</p>
+          </article>
+          <article class="point-card">
+            <span class="label">経費観点</span>
+            <h3>紙代だけでなく、機密図面の溶解処理コストまで削減。</h3>
+            <p>設計図など機微な情報を含む書類は、通常廃棄ではなく溶解処理などの機密文書処理が必要でした。紙の使用量を減らすことで、印刷・保管・廃棄・管理の負担を大幅に減らせます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cleanroom">
+        <div class="section-head" style="margin-bottom:22px;">
+          <div class="eyebrow">クリーンルームでの活用</div>
+          <h2>紙を持ち込むこと自体が管理負担になる現場へ。</h2>
+          <p>半導体関連のクリーンルームでは、従来は印刷物の持ち込みや管理が必要でした。PDF_DXにより、クリーンルーム備え付けのタブレットで図面を確認する運用が可能になり、印刷・回収・廃棄に伴う管理負担を軽減できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">このような現場におすすめ</div>
+          <h2>同じような紙図面運用に課題がある企業へ。</h2>
+        </div>
+        <div class="recommend-grid">
+          <div class="recommend-item">図面・検査資料を大量に印刷している</div><div class="recommend-item">担当者ごとに紙を分けて検査している</div><div class="recommend-item">最後に紙を集めて完成版を作っている</div><div class="recommend-item">スキャン・保管・廃棄が負担になっている</div><div class="recommend-item">機密図面の溶解処理コストがかかっている</div><div class="recommend-item">クリーンルームで紙資料を扱っている</div><div class="recommend-item">誰がいつ確認したかを追えるようにしたい</div><div class="recommend-item">電話問い合わせ時に紙資料を探して回答している</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="subsidy" style="text-align:center;">
+          <div class="eyebrow">Next Action</div>
+          <h2>紙図面の運用を、現場から見直しませんか？</h2>
+          <p>PDF_DXは、製造現場の図面・作業指示書・検査資料をクラウド上で管理し、確認業務の効率化と履歴の可視化を支援します。まずは現在の紙図面運用や検査記録の課題をお聞かせください。</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" href="index.html">PDF_DX製品ページを見る</a>
+            <a class="btn btn-secondary" href="mailto:it_contact@thinple.jp">導入相談をする</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© PDF_DX / Thinple</div>
+      <div class="legal-links">
+        <a href="index.html">製品ページ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
